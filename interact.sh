@@ -11,5 +11,6 @@ docker run \
 	-e "DISPLAY" \
 	-v "/tmp/.X11-unix:/tmp/.X11-unix:rw" \
 	--gpus all \
+	--privileged \
 	--net=host \
 	$image:$tag

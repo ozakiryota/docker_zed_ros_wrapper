@@ -39,5 +39,8 @@ RUN apt-get update && \
 	cd ~/catkin_ws && \
 	/bin/bash -c "source /opt/ros/noetic/setup.bash; rosdep install --from-paths src --ignore-src -r -y" && \
 	/bin/bash -c "source /opt/ros/noetic/setup.bash; catkin_make -DCMAKE_BUILD_TYPE=Release"
+########## Option ##########
+RUN apt-get update && \
+	apt-get install -y ros-noetic-rviz
 ########## Initial Position ##########
-WORKDIR /root/catkin_ws/src
+WORKDIR /root/catkin_ws/src/zed-ros-wrapper
